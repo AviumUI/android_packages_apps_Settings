@@ -29,4 +29,7 @@
     <string name="avium_maintainer">维护者</string>
     <string name="avium_kernel_version">内核版本</string>
     <string name="avium_official_status">构建类型</string>
+    <!-- Swipe to screenshot -->
+    <string name="swipe_to_screenshot_title">滑动截屏</string>
+    <string name="swipe_to_screenshot_summary">用三指向下滑动即可截屏</string>
 </resources>
