@@ -247,6 +247,13 @@
             android:defaultValue="@*lineageos.platform:bool/config_proximityCheckOnWakeEnabledByDefault"
             settings:requiresConfig="@*lineageos.platform:bool/config_proximityCheckOnWake" />
 
+        <!-- DC Dimming -->
+        <com.android.settings.display.DcDimmingPreference
+            android:key="dc_dimming"
+            android:title="@string/dc_dimming_title"
+            android:fragment="com.android.settings.display.DcDimmingSettings"
+            settings:keywords="@string/keywords_display_dc_dimming"/>
+
         <!-- Double tap to sleep -->
         <lineageos.preference.LineageSystemSettingSwitchPreference
             android:key="double_tap_sleep_gesture"
