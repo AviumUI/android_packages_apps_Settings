@@ -5541,4 +5541,14 @@
     <string name="contacts_storage_account_category_title" msgid="6427149157377815586">"联系人信息保存位置"</string>
     <string name="search_gesture_feature_title" msgid="7037117019612710960">"圈定即搜"</string>
     <string name="search_gesture_feature_summary" msgid="1793056495030564014">"轻触并按住主屏幕按钮或导航手柄，即可使用屏幕上的内容进行搜索。"</string>
+    <!-- Avium custom strings -->
+    <string name="avium_device_info_title">设备信息</string>
+    <string name="avium_ram">运行内存</string>
+    <string name="avium_processor">处理器</string>
+    <string name="avium_phone_model">手机型号</string>
+    <string name="avium_android_version">Android版本</string>
+    <string name="avium_storage">存储空间</string>
+    <string name="avium_system_version">系统版本</string>
+    <string name="avium_screen_resolution">屏幕分辨率</string>
+    <string name="avium_screen_size">屏幕尺寸</string>
 </resources>

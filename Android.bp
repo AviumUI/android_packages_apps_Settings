@@ -87,6 +87,7 @@ android_library {
         "net-utils-framework-common",
         "notification_flags_lib",
         "securebox",
+        "com.google.android.material_material",
         "//frameworks/libs/systemui:com_android_systemui_shared_flags_lib",
         "WindowManager-Shell-shared-desktopMode",
 

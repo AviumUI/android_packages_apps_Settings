@@ -13918,4 +13918,14 @@
     <string name="search_gesture_feature_title">Circle to Search</string>
     <!-- Summary text for press and hold nav handle OR home button to invoke Circle to Search. [CHAR LIMIT=NONE] -->
     <string name="search_gesture_feature_summary">Touch and hold the Home button or the navigation handle to search using the content on your screen.</string>
+
+    <!-- Avium custom strings -->
+    <string name="avium_device_info_title">Device Info</string>
+    <string name="avium_ram">RAM</string>
+    <string name="avium_processor">Processor</string>
+    <string name="avium_phone_model">Phone Model</string>
+    <string name="avium_android_version">Android Version</string>
+    <string name="avium_storage">Storage</string>
+    <string name="avium_system_version">System Version</string>
+    <string name="avium_screen_resolution">Screen Resolution</string>
 </resources>
