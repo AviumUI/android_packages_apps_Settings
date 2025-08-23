@@ -59,6 +59,10 @@ import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.LayoutPreference;
 
+// Ext add
+import org.avium.settings.aboutphone.AviumHeaderController;
+import org.avium.settings.aboutphone.AviumDeviceInfoCardController;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -123,7 +127,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
     @Override
     public void onStart() {
         super.onStart();
-        initHeader();
+        //initHeader();
     }
 
     @Override
@@ -152,6 +156,10 @@ public class MyDeviceInfoFragment extends DashboardFragment
         androidx.lifecycle.Lifecycle lifecycleObject = (fragment == null) ? null :
                 fragment.getLifecycle();
         final SlotSimStatus slotSimStatus = new SlotSimStatus(context, executor, lifecycleObject);
+
+        // Ext add
+        controllers.add(new AviumHeaderController(context, "avium_header"));
+        controllers.add(new AviumDeviceInfoCardController(context, "avium_device_info_card"));
 
         controllers.add(new IpAddressPreferenceController(context, lifecycle));
         controllers.add(new WifiMacAddressPreferenceController(context, lifecycle));
