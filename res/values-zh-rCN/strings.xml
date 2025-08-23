@@ -5997,4 +5997,15 @@
     <string name="safety_center_account_security_search_terms" msgid="3950829613581775913"></string>
     <string name="safety_center_device_finder_search_terms" msgid="452013643838126923"></string>
     <string name="safety_center_system_component_update_search_terms" msgid="3110390275537109543"></string>
+    
+    <!-- Avium custom strings -->
+    <string name="avium_device_info_title">设备信息</string>
+    <string name="avium_ram">运行内存</string>
+    <string name="avium_processor">处理器</string>
+    <string name="avium_phone_model">手机型号</string>
+    <string name="avium_android_version">Android版本</string>
+    <string name="avium_storage">存储空间</string>
+    <string name="avium_system_version">系统版本</string>
+    <string name="avium_screen_resolution">屏幕分辨率</string>
+    <string name="avium_screen_size">屏幕尺寸</string>
 </resources>
