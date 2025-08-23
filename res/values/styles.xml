@@ -1037,4 +1037,19 @@
         <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
     </style>
 
+    <!-- Avium custom text styles -->
+    <style name="AviumInfoLabel">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:fontFamily">sans-serif</item> 
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AviumInfoValue">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
 </resources>
