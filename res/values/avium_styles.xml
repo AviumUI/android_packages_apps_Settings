@@ -29,4 +29,13 @@
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textStyle">normal</item>
     </style>
+    <style name="AviumMaintainerTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="AviumMaintainerValue">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
 </resources>

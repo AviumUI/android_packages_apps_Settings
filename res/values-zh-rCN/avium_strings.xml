@@ -25,4 +25,11 @@
     <string name="avium_system_version">系统版本</string>
     <string name="avium_screen_resolution">屏幕分辨率</string>
     <string name="avium_screen_size">屏幕尺寸</string>
+    <string name="avium_maintainer_info_title">关于 &amp; 维护者</string>
+    <string name="avium_maintainer">维护者</string>
+    <string name="avium_kernel_version">内核版本</string>
+    <string name="avium_selinux_status">SELinux 状态</string>
+    <string name="selinux_status_enforcing">Enforcing</string>
+    <string name="selinux_status_permissive">Permissive</string>
+    <string name="selinux_status_disabled">Disabled</string>
 </resources>
