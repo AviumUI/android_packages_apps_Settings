@@ -62,6 +62,7 @@ import com.android.settingslib.widget.LayoutPreference;
 // Ext add
 import org.avium.settings.aboutphone.AviumHeaderController;
 import org.avium.settings.aboutphone.AviumDeviceInfoCardController;
+import org.avium.settings.aboutphone.AviumMaintainerCardController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -160,6 +161,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
         // Ext add
         controllers.add(new AviumHeaderController(context, "avium_header"));
         controllers.add(new AviumDeviceInfoCardController(context, "avium_device_info_card"));
+        controllers.add(new AviumMaintainerCardController(context, "avium_maintainer_card"));
 
         controllers.add(new IpAddressPreferenceController(context, lifecycle));
         controllers.add(new WifiMacAddressPreferenceController(context, lifecycle));
