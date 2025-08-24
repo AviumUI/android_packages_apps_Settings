@@ -296,4 +296,6 @@
 
     <color name="gm_grey_900">#202124</color>
 
+    <!-- Avium card background color -->
+    <color name="avium_card_background_color">#FFFFFFFF</color>
 </resources>
