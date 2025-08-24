@@ -224,4 +224,7 @@
 
     <!-- Connected displays -->
     <color name="display_topology_background_color">@color/settingslib_color_grey100</color>
+
+    <!-- Avium card background color -->
+    <color name="avium_card_background_color">#FFFFFFFF</color>
 </resources>

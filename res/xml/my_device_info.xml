@@ -43,6 +43,12 @@
         android:layout="@layout/avium_device_info_card"
         android:selectable="false"/>
 
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="avium_maintainer_card"
+        android:order="-98"
+        android:layout="@layout/avium_maintainer_card"
+        android:selectable="false"/>
+
     <PreferenceCategory
         android:key="basic_info_category"
         android:selectable="false"

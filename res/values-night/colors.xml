@@ -82,5 +82,8 @@
 
     <!-- Connected displays -->
     <color name="display_topology_background_color">@color/settingslib_color_charcoal</color>
+
+    <!-- Avium card background color -->
+    <color name="avium_card_background_color">#303030</color>
 </resources>
 
