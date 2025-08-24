@@ -14409,4 +14409,11 @@ Data usage charges may apply.</string>
     <string name="avium_storage">Storage</string>
     <string name="avium_system_version">System Version</string>
     <string name="avium_screen_resolution">Screen Resolution</string>
+    <string name="avium_maintainer_info_title">About &amp; Maintainership</string>
+    <string name="avium_maintainer">Maintainer</string>
+    <string name="avium_kernel_version">Kernel Version</string>
+    <string name="avium_selinux_status">SELinux Status</string>
+    <string name="selinux_status_enforcing">Enforcing</string>
+    <string name="selinux_status_permissive">Permissive</string>
+    <string name="selinux_status_disabled">Disabled</string>
 </resources>

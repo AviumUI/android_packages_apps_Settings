@@ -93,5 +93,8 @@
 
     <!-- Keyboard a11y input dialog -->
     <color name="input_dialog_slider_progress">@android:color/system_on_primary_container_dark</color>
+
+    <!-- Avium card background color -->
+    <color name="avium_card_background_color">#303030</color>
 </resources>
 
