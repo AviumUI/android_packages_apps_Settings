@@ -84,6 +84,20 @@ public class AviumMaintainerCardController extends AbstractPreferenceController 
      * get selinux state
      */
     private String getSelinuxStatus() {
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("/sys/fs/selinux/enforce"));
+            String line = reader.readLine();
+            reader.close();
+            if (line != null) {
+                if (line.trim().equals("1")) {
+                    return mContext.getString(R.string.selinux_status_enforcing);
+                } else if (line.trim().equals("0")) {
+                    return mContext.getString(R.string.selinux_status_permissive);
+                }
+            }
+        } catch (IOException e) {
+        }
         if (!SELinux.isSELinuxEnabled()) {
             return mContext.getString(R.string.selinux_status_disabled);
         } else if (SELinux.isSELinuxEnforced()) {
