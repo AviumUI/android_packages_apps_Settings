@@ -36,7 +36,8 @@
         android:title="@*lineageos.platform:string/lineage_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"/>
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"
+        settings:isPreferenceVisible="false"/>
 
     <!-- Security patch -->
     <Preference

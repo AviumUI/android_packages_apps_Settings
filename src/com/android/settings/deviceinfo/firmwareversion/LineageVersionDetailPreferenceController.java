@@ -61,7 +61,7 @@ public class LineageVersionDetailPreferenceController extends BasePreferenceCont
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override
