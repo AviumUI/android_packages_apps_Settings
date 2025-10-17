@@ -5761,21 +5761,5 @@
     <string name="supervision_web_content_filters_search_filter_off_summary" msgid="3834238970190924433">"当前账号设置仍可能会使系统滤除或模糊处理含有露骨内容的搜索结果"</string>
     <string name="supervision_full_screen_pin_verification_title" msgid="78513043528333399">"输入监督 PIN 码"</string>
     <string name="accessibility_illustration_content_description" msgid="557376174860150903">"“<xliff:g id="FEATURE">%1$s</xliff:g>”动画"</string>
-    <!-- Avium custom strings -->
-    <string name="avium_device_info_title">设备信息</string>
-    <string name="avium_ram">运行内存</string>
-    <string name="avium_processor">处理器</string>
-    <string name="avium_phone_model">手机型号</string>
-    <string name="avium_android_version">Android版本</string>
-    <string name="avium_storage">存储空间</string>
-    <string name="avium_system_version">系统版本</string>
-    <string name="avium_screen_resolution">屏幕分辨率</string>
-    <string name="avium_screen_size">屏幕尺寸</string>
-    <string name="avium_maintainer_info_title">关于 &amp; 维护者</string>
-    <string name="avium_maintainer">维护者</string>
-    <string name="avium_kernel_version">内核版本</string>
-    <string name="avium_selinux_status">SELinux 状态</string>
-    <string name="selinux_status_enforcing">Enforcing</string>
-    <string name="selinux_status_permissive">Permissive</string>
-    <string name="selinux_status_disabled">Disabled</string>
+    
 </resources>

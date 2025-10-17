@@ -14419,5 +14419,8 @@ Data usage charges may apply.</string>
     <!-- Game Space -->
     <string name="game_space_title">Game Space</string>
     <string name="game_space_summary">Enhance your gaming experience</string>
+    <string name="app_volume_summary">Pre-app Volume Settings</string>
+    <string name="app_volume_title">App Volume</string>
+    <string name="app_volume">App Volume</string>
 
 </resources>
