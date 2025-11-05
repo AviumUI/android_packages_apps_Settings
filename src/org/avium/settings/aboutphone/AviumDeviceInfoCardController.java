@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.os.StatFs;
 import android.os.SystemProperties;
+import android.os.storage.StorageManager;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ import androidx.preference.PreferenceScreen;
 import com.android.settings.R;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.widget.LayoutPreference;
+import com.android.settingslib.deviceinfo.StorageManagerVolumeProvider;
 
 import java.io.File;
 
@@ -94,17 +96,29 @@ public class AviumDeviceInfoCardController extends AbstractPreferenceController 
 
     private String getStorageInfo() {
         try {
+            long totalBytes = 0L;
+            StorageManager sm = mContext.getSystemService(StorageManager.class);
+            if (sm != null) {
+                StorageManagerVolumeProvider smvp = new StorageManagerVolumeProvider(sm);
+                totalBytes = smvp.getPrimaryStorageSize();
+            }
+               
+            if (totalBytes <= 0) {
+                File totalPath = Environment.getDataDirectory();
+                StatFs totalStat = new StatFs(totalPath.getPath());
+                totalBytes = totalStat.getBlockSizeLong() * totalStat.getBlockCountLong();
+            }
+
             File path = Environment.getDataDirectory();
             StatFs stat = new StatFs(path.getPath());
-            long blockSize = stat.getBlockSizeLong();
-            long totalBlocks = stat.getBlockCountLong();
-            long availableBlocks = stat.getAvailableBlocksLong();
+            long freeBytes = stat.getAvailableBytes();
 
-            long totalSizeGb = totalBlocks * blockSize / (1024 * 1024 * 1024);
-            long availableSizeGb = availableBlocks * blockSize / (1024 * 1024 * 1024);
-            long usedSizeGb = totalSizeGb - availableSizeGb;
+            long totalG = Math.round(totalBytes / 1_000_000_000d);
+            long freeG = (long) Math.floor(freeBytes / 1_000_000_000d);
+            if (freeG < 0) freeG = 0;
+            long usedG = totalG - freeG;
 
-            return usedSizeGb + "/" + totalSizeGb + " GB";
+            return usedG + "/" + totalG + "G";
         } catch (Exception e) {
             return UNKNOWN;
         }
