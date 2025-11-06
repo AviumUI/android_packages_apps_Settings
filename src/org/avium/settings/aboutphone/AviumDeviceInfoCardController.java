@@ -103,10 +103,19 @@ public class AviumDeviceInfoCardController extends AbstractPreferenceController 
         ActivityManager actManager = (ActivityManager) mContext.getSystemService(Context.ACTIVITY_SERVICE);
         ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
         actManager.getMemoryInfo(memInfo);
-        double totalRamBytes = memInfo.totalMem;
-        double totalRamGb = totalRamBytes / (1024 * 1024 * 1024);
-        long ramGb = (long) Math.ceil(totalRamGb);
-        return ramGb + " GB";
+        double totalRamGbDecimal = memInfo.totalMem / 1_000_000_000d;
+
+        final int[] buckets = new int[] { 2, 4, 6, 8, 12, 16, 24 };
+        int best = buckets[0];
+        double bestDiff = Double.MAX_VALUE;
+        for (int b : buckets) {
+            double diff = Math.abs(totalRamGbDecimal - b);
+            if (diff < bestDiff) {
+                bestDiff = diff;
+                best = b;
+            }
+        }
+        return best + " GB";
     }
 
     private String getStorageInfo() {
