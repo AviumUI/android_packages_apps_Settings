@@ -14422,5 +14422,7 @@ Data usage charges may apply.</string>
     <string name="app_volume_summary">Pre-app Volume Settings</string>
     <string name="app_volume_title">App Volume</string>
     <string name="app_volume">App Volume</string>
-
+    <!-- Ltpo features -->
+    <string name="ltpo_features_title">Enable LTPO features</string>
+    <string name="ltpo_features_summary">Enables device-specific adaptive idle and frame rate features for improving efficiency</string>
 </resources>
