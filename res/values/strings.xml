@@ -14428,4 +14428,6 @@ Data usage charges may apply.</string>
     <!-- Disable VRR -->
     <string name="disable_vrr_title">Disable VRR</string>
     <string name="disable_vrr_summary">Do not use content based refresh rate switching\nWill harm battery life</string>
+    <!-- Avium custom strings -->
+    <string name="avium_official_status">Build Type</string>
 </resources>

@@ -71,6 +71,9 @@ public class AviumMaintainerCardController extends AbstractPreferenceController 
         
         TextView kernelView = mLayoutPreference.findViewById(R.id.kernel_value);
         kernelView.setText(getKernelVersion());
+
+        TextView officialView = mLayoutPreference.findViewById(R.id.is_official_value);
+        officialView.setText(getOfficialStatus());
     }
 
     /**
@@ -90,5 +93,12 @@ public class AviumMaintainerCardController extends AbstractPreferenceController 
             // e.printStackTrace();
         }
         return UNKNOWN;
+    }
+
+    /**
+     * get official status
+     */
+    private String getOfficialStatus() {
+        return SystemProperties.getBoolean("ro.avium.is_official", false) ? "Official" : "Unofficial";
     }
 }
