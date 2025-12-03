@@ -20,7 +20,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/settings_homepage_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground"> 
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/main_content_scrollable_container"
@@ -62,19 +63,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:elevation="0dp"
+        android:background="?android:attr/windowBackground" 
         android:touchscreenBlocksFocus="false"
         android:keyboardNavigationCluster="false">
         <LinearLayout
             android:id="@+id/app_bar_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="@dimen/search_bar_container_top_padding"
+            android:orientation="vertical" 
             android:paddingBottom="16dp"
             android:paddingStart="?android:attr/listPreferredItemPaddingStart"
             android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
-
-            <include layout="@layout/search_bar_unified_version"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent" />
+            <TextView
+                android:id="@+id/homepage_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_label"
+                android:textSize="34sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="8dp"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/search_bar_unified_version"/>
+            </FrameLayout>
 
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
