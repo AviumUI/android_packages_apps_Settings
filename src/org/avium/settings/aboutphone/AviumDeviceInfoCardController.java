@@ -72,11 +72,11 @@ public class AviumDeviceInfoCardController extends AbstractPreferenceController 
 
         // model
         TextView modelView = mLayoutPreference.findViewById(R.id.device_model_value);
-        modelView.setText(SystemProperties.get("ro.product.model", Build.MODEL));
+        modelView.setText(getDeviceModel());
 
         // soc
         TextView processorView = mLayoutPreference.findViewById(R.id.processor_value);
-        processorView.setText(SystemProperties.get("ro.soc.model", UNKNOWN));
+        processorView.setText(getSocModel());
 
         // android version
         TextView androidVersionView = mLayoutPreference.findViewById(R.id.android_version_value);
@@ -97,6 +97,20 @@ public class AviumDeviceInfoCardController extends AbstractPreferenceController 
         // screen
         TextView resolutionView = mLayoutPreference.findViewById(R.id.screen_resolution_value);
         resolutionView.setText(getScreenResolution());
+    }
+
+    private String getDeviceModel() {
+        if (!SystemProperties.get("ro.avium.device.codename").equals("Unknown")) {
+            return SystemProperties.get("ro.avium.device.codename");
+        }
+        return SystemProperties.get("ro.product.model", Build.MODEL);
+    }
+
+    private String getSocModel() {
+        if(!SystemProperties.get("ro.avium.soc.model").equals("Unknown")) {
+            return SystemProperties.get("ro.avium.soc.model");
+        }
+        return SystemProperties.get("ro.soc.model", UNKNOWN);
     }
 
     private String getTotalRam() {
