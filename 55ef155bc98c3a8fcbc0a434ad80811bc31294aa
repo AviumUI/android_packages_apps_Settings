@@ -24,6 +24,30 @@
       "serverId": "8582d5b1-6499-4a2f-9eb8-9aae0e0bb54f"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f034c53d_651c3abb",
+        "filename": "src/com/android/settings/custom/utils/AppUtils.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-01-29T08:57:58Z",
+      "side": 1,
+      "message": "Marked as resolved.",
+      "parentUuid": "e2fc33c2_5b0923d4",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 12
+      },
+      "revId": "55ef155bc98c3a8fcbc0a434ad80811bc31294aa",
+      "serverId": "8582d5b1-6499-4a2f-9eb8-9aae0e0bb54f"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d4c1307e_3c34a173",
@@ -47,6 +71,30 @@
       "serverId": "8582d5b1-6499-4a2f-9eb8-9aae0e0bb54f"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "be288ec1_f5c7e208",
+        "filename": "src/com/android/settings/custom/utils/AppUtils.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-01-29T08:57:58Z",
+      "side": 1,
+      "message": "Marked as resolved.",
+      "parentUuid": "d4c1307e_3c34a173",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 12
+      },
+      "revId": "55ef155bc98c3a8fcbc0a434ad80811bc31294aa",
+      "serverId": "8582d5b1-6499-4a2f-9eb8-9aae0e0bb54f"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bb3a9d4c_e1d9c86a",
@@ -60,6 +108,30 @@
       "writtenOn": "2026-01-29T06:14:08Z",
       "side": 1,
       "message": "same",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 4
+      },
+      "revId": "55ef155bc98c3a8fcbc0a434ad80811bc31294aa",
+      "serverId": "8582d5b1-6499-4a2f-9eb8-9aae0e0bb54f"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c2a6b94_cad1d34a",
+        "filename": "src/com/android/settings/custom/utils/AppUtils.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2026-01-29T08:57:58Z",
+      "side": 1,
+      "message": "Marked as resolved.",
+      "parentUuid": "bb3a9d4c_e1d9c86a",
       "range": {
         "startLine": 21,
         "startChar": 0,
