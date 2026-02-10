@@ -119,7 +119,7 @@ public class AviumDeviceInfoCardController extends AbstractPreferenceController 
         actManager.getMemoryInfo(memInfo);
         double totalRamGbDecimal = memInfo.totalMem / 1_000_000_000d;
 
-        final int[] buckets = new int[] { 2, 4, 6, 8, 12, 16, 24 };
+        final int[] buckets = new int[] { 1, 2, 3, 4, 6, 8, 10, 12, 16, 24 };
         int best = buckets[0];
         double bestDiff = Double.MAX_VALUE;
         for (int b : buckets) {
