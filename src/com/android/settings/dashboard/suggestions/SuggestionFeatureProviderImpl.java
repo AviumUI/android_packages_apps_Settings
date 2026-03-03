@@ -41,9 +41,7 @@ public class SuggestionFeatureProviderImpl implements SuggestionFeatureProvider 
 
     @Override
     public boolean isSuggestionEnabled(Context context) {
-        final ActivityManager am =
-                (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-        return !am.isLowRamDevice();
+        return false;
     }
 
     @Override
@@ -82,10 +80,6 @@ public class SuggestionFeatureProviderImpl implements SuggestionFeatureProvider 
     @Nullable
     @Override
     public Class<? extends Fragment> getSuggestionFragment() {
-        if (Flags.updatedSuggestionCardAosp()) {
-            return SuggestionFragment.class;
-        } else {
-            return null;
-        }
+        return null;
     }
 }
