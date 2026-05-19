@@ -35,4 +35,12 @@
     <string name="app_volume">App volume</string>
     <string name="app_volume_title">Per-app volume control</string>
     <string name="app_volume_summary">Show per-app volume button into volume dialog</string>
+    <!-- AOD schedule -->
+    <string name="avium_aod_category_title">AOD settings</string>
+    <string name="avium_aod_schedule_title">Schedule</string>
+    <string name="avium_aod_schedule_summary">Set a schedule for always-on display</string>
+    <string name="avium_aod_schedule_start_time_title">Start time</string>
+    <string name="avium_aod_schedule_end_time_title">End time</string>
+    <string name="avium_aod_shake_title">Shake to show</string>
+    <string name="avium_aod_shake_summary">Shake the device to show 10s</string>
 </resources>
