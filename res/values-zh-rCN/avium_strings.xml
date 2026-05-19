@@ -36,4 +36,12 @@
     <string name="app_volume">应用音量控制</string>
     <string name="app_volume_title">控制特定应用的音量</string>
     <string name="app_volume_summary">在音量条中显示应用音量控制按钮</string>
+    <!-- AOD schedule -->
+    <string name="avium_aod_category_title">屏幕常亮设置</string>
+    <string name="avium_aod_schedule_title">定时</string>
+    <string name="avium_aod_schedule_summary">设置屏幕常亮的时间段</string>
+    <string name="avium_aod_schedule_start_time_title">开始时间</string>
+    <string name="avium_aod_schedule_end_time_title">结束时间</string>
+    <string name="avium_aod_shake_title">摇动显示</string>
+    <string name="avium_aod_shake_summary">摇动设备以触发屏幕常亮10秒</string>
 </resources>

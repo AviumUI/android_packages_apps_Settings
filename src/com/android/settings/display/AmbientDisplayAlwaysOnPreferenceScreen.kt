@@ -57,6 +57,8 @@ import com.android.settingslib.metadata.SensitivityLevel
 import com.android.settingslib.metadata.preferenceHierarchy
 import com.android.systemui.shared.Flags.ambientAod
 import kotlinx.coroutines.CoroutineScope
+import org.avium.settings.display.AviumAodScheduleTimePreference
+import org.avium.settings.display.AviumAodSwitchPreference
 
 // LINT.IfChange
 /**
@@ -159,6 +161,32 @@ open class AmbientDisplayAlwaysOnPreferenceScreen(context: Context) :
                 +Category("ambient_wallpaperGroup", R.string.doze_always_on_wallpaper_options) += {
                     +ambientWallpaperPreference
                 }
+            }
+            +Category("avium_aod_group", R.string.avium_aod_category_title) += {
+                +AviumAodSwitchPreference(
+                    context,
+                    AviumAodSwitchPreference.KEY_SCHEDULE,
+                    R.string.avium_aod_schedule_title,
+                    R.string.avium_aod_schedule_summary,
+                    AviumAodSwitchPreference.KEY_SCHEDULE
+                )
+                +AviumAodScheduleTimePreference(
+                    "avium_aod_schedule_start_time",
+                    R.string.avium_aod_schedule_start_time_title,
+                    "avium_aod_schedule_start_time"
+                )
+                +AviumAodScheduleTimePreference(
+                    "avium_aod_schedule_end_time",
+                    R.string.avium_aod_schedule_end_time_title,
+                    "avium_aod_schedule_end_time"
+                )
+                +AviumAodSwitchPreference(
+                    context,
+                    AviumAodSwitchPreference.KEY_SHAKE,
+                    R.string.avium_aod_shake_title,
+                    R.string.avium_aod_shake_summary,
+                    AviumAodSwitchPreference.KEY_SHAKE
+                )
             }
         }
 
