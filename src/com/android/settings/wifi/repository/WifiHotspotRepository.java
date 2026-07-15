@@ -34,6 +34,7 @@ import android.net.wifi.SoftApConfiguration;
 import android.net.wifi.WifiAvailableChannel;
 import android.net.wifi.WifiManager;
 import android.net.wifi.WifiScanner;
+import android.os.SystemProperties;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -56,6 +57,8 @@ import java.util.function.Consumer;
  */
 public class WifiHotspotRepository {
     private static final String TAG = "WifiHotspotRepository";
+    private static final String FORCE_6GHZ_HOTSPOT_PROPERTY =
+            "persist.avium.wifi.force_6ghz_hotspot";
 
     private static final int RESTART_INTERVAL_MS = 100;
 
@@ -398,6 +401,9 @@ public class WifiHotspotRepository {
      * @return {@code true} if Wi-Fi Hotspot 5 GHz Band is available
      */
     public boolean is5gAvailable() {
+        if (isForce6GhzHotspotEnabled()) {
+            return is5GHzBandSupported();
+        }
         if (!mBand5g.isChannelsReady && is5GHzBandSupported()) {
             isChannelAvailable(mBand5g);
         }
@@ -440,6 +446,9 @@ public class WifiHotspotRepository {
      * @return {@code true} if Wi-Fi Hotspot 6 GHz Band is available
      */
     public boolean is6gAvailable() {
+        if (isForce6GhzHotspotEnabled()) {
+            return is6GHzBandSupported();
+        }
         if (!mBand6g.isChannelsReady && is6GHzBandSupported()) {
             isChannelAvailable(mBand6g);
         }
@@ -461,6 +470,11 @@ public class WifiHotspotRepository {
         if (m6gAvailable != null) {
             m6gAvailable.setValue(is6gAvailable());
         }
+    }
+
+    @VisibleForTesting
+    boolean isForce6GhzHotspotEnabled() {
+        return SystemProperties.getBoolean(FORCE_6GHZ_HOTSPOT_PROPERTY, false);
     }
 
     /**

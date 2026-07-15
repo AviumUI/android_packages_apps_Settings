@@ -658,6 +658,28 @@ public class WifiHotspotRepositoryTest {
     }
 
     @Test
+    public void is5gAvailable_force6GhzEnabled_usesHardwareSupport() {
+        mRepository = spy(mRepository);
+        doReturn(true).when(mRepository).isForce6GhzHotspotEnabled();
+        mRepository.mIs5gBandSupported = true;
+        mRepository.mBand5g.hasChannels = false;
+        mRepository.mBand5g.hasCapability = false;
+
+        assertThat(mRepository.is5gAvailable()).isTrue();
+    }
+
+    @Test
+    public void is6gAvailable_force6GhzEnabled_usesHardwareSupport() {
+        mRepository = spy(mRepository);
+        doReturn(true).when(mRepository).isForce6GhzHotspotEnabled();
+        mRepository.mIs6gBandSupported = true;
+        mRepository.mBand6g.hasChannels = false;
+        mRepository.mBand6g.hasCapability = false;
+
+        assertThat(mRepository.is6gAvailable()).isTrue();
+    }
+
+    @Test
     public void isSpeedFeatureAvailable_configNotShow_returnFalse() {
         mRepository.mIsConfigShowSpeed = false;
 
